@@ -1,0 +1,9 @@
+D:\project\2019\ChuanYe.ParkGuide\Wetland\bin\Debug\netcoreapp2.2\Wetland.deps.json
+D:\project\2019\ChuanYe.ParkGuide\Wetland\bin\Debug\netcoreapp2.2\Wetland.dll
+D:\project\2019\ChuanYe.ParkGuide\Wetland\bin\Debug\netcoreapp2.2\Wetland.pdb
+D:\project\2019\ChuanYe.ParkGuide\Wetland\obj\Debug\netcoreapp2.2\Wetland.csprojAssemblyReference.cache
+D:\project\2019\ChuanYe.ParkGuide\Wetland\obj\Debug\netcoreapp2.2\Wetland.csproj.CoreCompileInputs.cache
+D:\project\2019\ChuanYe.ParkGuide\Wetland\obj\Debug\netcoreapp2.2\Wetland.AssemblyInfoInputs.cache
+D:\project\2019\ChuanYe.ParkGuide\Wetland\obj\Debug\netcoreapp2.2\Wetland.AssemblyInfo.cs
+D:\project\2019\ChuanYe.ParkGuide\Wetland\obj\Debug\netcoreapp2.2\Wetland.dll
+D:\project\2019\ChuanYe.ParkGuide\Wetland\obj\Debug\netcoreapp2.2\Wetland.pdb
