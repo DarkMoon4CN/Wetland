@@ -63,7 +63,8 @@
     <Compile Include="LambdaToSql\ExpressionSqlWriter.cs" />
     <Compile Include="LambdaToSql\ExpressionVisitor.cs" />
     <Compile Include="MassiveContext.cs" />
-    <Compile Include="Models\WetlandBaseModel.cs" />
+    <Compile Include="Models\BlockBase.cs" />
+    <Compile Include="Models\WetlandPrimaryKeyModel.cs" />
     <Compile Include="Models\DBPageBase.cs" />
     <Compile Include="Models\TableDataCount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

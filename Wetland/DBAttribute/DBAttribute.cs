@@ -96,7 +96,7 @@ namespace Wetland.DBAttribute
     /// <summary>
     /// 货币
     /// </summary>
-    public class DECIMAL
+    public class DECIMAL : Attribute
     {
         /// <summary>
         /// 精度

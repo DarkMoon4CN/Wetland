@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace Open.SchoolBase.ExpressionVisitor
+namespace Open.ExpressionVisitor
 {
     /// <summary>
     /// Evaluator类公开了一个静态方法“PartialEval”，您可以调用该方法来评估表达式中的这些子树，只留下具有实际值的常量节点。 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace Open.SchoolBase.ExpressionVisitor
+namespace Open.ExpressionVisitor
 {
     internal static class ExpressionHelper
     {

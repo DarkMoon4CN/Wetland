@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq.Expressions;
 
-namespace Open.SchoolBase.ExpressionVisitor
+namespace Open.ExpressionVisitor
 {
     public abstract class ExpressionVisitor
     {

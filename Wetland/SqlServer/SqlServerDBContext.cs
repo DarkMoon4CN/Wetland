@@ -25,6 +25,11 @@ namespace Wetland.SqlServer
 
         }
 
+        /// <summary>
+        /// 构造时，勿指定数据库:data source=.;uid=sa;pwd=123456;
+        /// </summary>
+        /// <param name="dbName"></param>
+        /// <param name="relTable"></param>
         public DBContext(string dbName, string relTable)
         {
             writer = SqlServerDatabase.Writer;
@@ -44,8 +49,8 @@ namespace Wetland.SqlServer
         /// <param name="readerConn">connectionStrings 节点名称</param>
         public DBContext(string dbName, string relTable,string writerConn,string readerConn)
         {
-            writer= DatabaseFactory.CreateDatabase(writerConn);
-            reader = DatabaseFactory.CreateDatabase(readerConn);
+            writer= new Microsoft.Practices.EnterpriseLibrary.Data.Sql.SqlDatabase(writerConn);
+            reader = new Microsoft.Practices.EnterpriseLibrary.Data.Sql.SqlDatabase(readerConn);
             this.relTable = relTable;
             this.dbName = dbName;
             Create_Wetland_Database(dbName);
@@ -150,7 +155,7 @@ namespace Wetland.SqlServer
                 }
                 else
                 {
-                    string createTableSql = entity.GetClassToCreateSql(dbName, name);
+                    string createTableSql = entity.GetClassToCreateSql(dbName, name,true);
                     bool isCreate = Create_Wetland_Table(createTableSql, name);
                     if (isCreate)
                     {
@@ -167,7 +172,7 @@ namespace Wetland.SqlServer
             }
             else
             {
-                string createTableSql = entity.GetClassToCreateSql(dbName, name);
+                string createTableSql = entity.GetClassToCreateSql(dbName, name,true);
                 bool isCreate = Create_Wetland_Table(createTableSql, name);
                 if (isCreate)
                 {

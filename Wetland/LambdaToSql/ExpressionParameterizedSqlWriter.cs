@@ -9,7 +9,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace Open.SchoolBase.ExpressionVisitor
+namespace Open.ExpressionVisitor
 {
     /// <summary>
     /// 参数化的sql语句

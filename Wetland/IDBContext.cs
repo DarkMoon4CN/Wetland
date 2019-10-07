@@ -10,6 +10,8 @@ namespace Wetland
 {
     interface IDBContext
     {
+        bool AddList<T>(List<T> entitys);
+
         bool Add<T>(T entity);
 
         List<T> Get<T>(Expression<Func<T, bool>> where, DBPageBase page);

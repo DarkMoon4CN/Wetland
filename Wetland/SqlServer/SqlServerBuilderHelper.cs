@@ -2,13 +2,14 @@
  * https://blog.csdn.net/sunshine_qqr/article/details/82011727
  */
 
-using Open.SchoolBase.ExpressionVisitor;
+using Open.ExpressionVisitor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Wetland.Models;
 
 namespace Wetland.SqlServer
 {
@@ -42,6 +43,34 @@ namespace Wetland.SqlServer
             {
                 return string.Empty;
             }
+            StringBuilder sql = new StringBuilder();
+            sql.Append("INSERT INTO " + tableName);
+            sql.Append("(" + columns + ")");
+            sql.Append(" VALUES(" + values + ")");
+            return sql.ToString();
+        }
+
+        public static string InsertSql<T>(T t, string tableName, WetlandPrimaryKeyModel pk)
+        {
+            if (t == null || string.IsNullOrEmpty(tableName))
+            {
+                return string.Empty;
+            }
+            string columns = GetColmons(t);
+            if (string.IsNullOrEmpty(columns))
+            {
+                return string.Empty;
+            }
+            string values = GetValues(t);
+            if (string.IsNullOrEmpty(values))
+            {
+                return string.Empty;
+            }
+
+            string pkColumn = GetColmons(pk);
+            string pkValue = GetValues(pk);
+            columns=columns + "," + pkColumn;
+            values = values + "," + pkValue;
             StringBuilder sql = new StringBuilder();
             sql.Append("INSERT INTO " + tableName);
             sql.Append("(" + columns + ")");
